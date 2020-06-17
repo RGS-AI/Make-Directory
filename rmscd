@@ -1,0 +1,22 @@
+import os
+
+choice = int(input("Press 1 for creating a new directory!\nPress 2 for deleting the directory!\n"))
+
+if choice == 1:
+    dir_name = input('Input the directory name: ')
+    path = "./%s" % dir_name
+    try:
+        os.mkdir(path)
+    except OSError:
+        print('Directory could not be created!\nMaybe it exists.')
+    else:
+        print('Directory successfully created!')
+else:
+    del_dir = input('Input the name of the directory that needs to be removed: ')
+    path = './%s' % del_dir
+    try:
+        os.rmdir(path)
+    except OSError:
+        print('Directory does not exist! Please check the name of the dir.')
+    else:
+        print('Directory removed successfully!')
