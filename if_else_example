@@ -1,0 +1,10 @@
+name = input('Please input your Name: ')
+age = int(input('Please input your age: '))
+
+if age >= 16:
+    print('You can get inside: Welcome to Heartfulness training!')
+
+else:
+    print('Your age does not meet the requirement')
+
+print("\033[1m" + 'Thanks for visiting!' + "\033[0;0m")
